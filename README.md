@@ -1,2 +1,4 @@
 # Cacium-preprocess
-Preprocessing of light stimulus-evoked \ce{Ca^2+} signals
+
+Preprocessing of calcium signals of neurons to chrip and moving bars, see [Baden et al., 2016](https://www.nature.com/articles/nature16468)
+.

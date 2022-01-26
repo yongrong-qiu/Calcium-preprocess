@@ -409,7 +409,7 @@ class OsDsIndexes():
         correction_factor = bin_spacing / (2 * (np.sin(bin_spacing / 2)))  # Zar 1999, Equation 26.16
         complExp = [np.exp(per * 1j * d) for d in dirs]
         vector = np.dot(complExp, v)
-        index = correction_factor * np.abs(vector) 
+        index = correction_factor * np.abs(vector) /np.sum(v) # normalize to make it between 0 and 1
         direction = cmath.phase(vector)/per
         if per == 2 and direction < 0:
             direction+=np.pi

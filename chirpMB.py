@@ -445,7 +445,7 @@ class OsDsIndexes():
         temp = np.max(np.append(self.v, self.ds_index))
         ax.plot((0,np.pi),(temp*1.2,temp*1.2), color ='gray')
         ax.plot((np.pi/2,np.pi/2*3),(temp*1.2,temp*1.2), color ='gray')
-        ax.plot([0, self.pref_dir], [0, self.ds_index], color = 'r')
+        ax.plot([0, self.pref_dir], [0, self.ds_index*np.sum(self.v)], color = 'r')
         ax.plot(np.append(self.sorted_dir_rad, self.sorted_dir_rad[0]), np.append(self.v, self.v[0]), color = 'k')
         ax.set_rmin(0)
         ax.set_thetalim([0, 2*np.pi])
